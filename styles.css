@@ -1,4 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+
+}
+
+img {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    /* border: solid; */
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+}
+
 h1 {
     color: rebeccapurple;
     text-align: center;
+}
+
+.rps-container {
+    display: flex;
+    column-gap: 5px;
+    align-self: center;
+}
+
+.rps-container img {
+    width: 150px;
+    height: 200px;
+}
+
+.round-container {
+    text-align: center;
+    background-color: #66f3ee;
+}
+
+.win-container {
+    display: flex;
+    justify-content: space-around;
+    align-items:stretch; 
+    column-gap: 100px; 
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.winner {
+    color: green;
+}
+
+.loser {
+    color: red;
+}
+
+.game-refresh {
+    border: none;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    margin: auto;
+    padding-top: 5px;
+}
+
+.player1, .player2 {
+    padding: 2px;
+}
+.playing {
+    background-color: #FFDEE9;
+    font-weight: bolder ;
+}
+.log-header {
+    background-color: #66f3ee;
 }
