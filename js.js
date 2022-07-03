@@ -1,49 +1,3 @@
-// let player_win_count = 0;
-// let comp_win_count = 0;
-// let options = ['rocks', 'scissors', 'papers'];
-
-// let computerPlay = () => options[Math.floor(Math.random() * options.length)];
-// function gameplay(player, computer){
-//     if(player === 'rocks' && computer === 'scissors'){
-//         console.log('You win! ' + player + ' beats ' + computer );
-//         player_win_count++;
-//     }
-//     else if(player==='scissors' && computer==='papers'){
-//         console.log('You win! ' + player + ' beats ' + computer );
-//         player_win_count++;
-//     }
-//     else if(player==='papers' && computer==='rocks'){
-//         console.log('You win! ' + player + ' beats ' + computer );
-//         player_win_count++;
-//     }
-//     else if(computer === 'rocks' &&  player=== 'scissors'){
-//         console.log('You lose! ' + computer + ' beats ' + player );
-//         comp_win_count++;
-//     }
-//     else if(computer==='scissors' && player==='papers'){
-//         console.log('You lose! ' + computer + ' beats ' + player );
-//         comp_win_count++;
-//     }
-//     else if(computer==='papers' && player==='rocks'){
-//         console.log('You lose! ' + computer + ' beats ' + player );
-//         comp_win_count++;
-//     }
-//     else
-//         console.log('Tie')
-// }
-// for (let i = 0; i<5; i++){
-//     player_ch = prompt('Enter your choice:');
-//     gameplay(player_ch.toLowerCase(), computerPlay());
-// }
-
-// if(player_win_count>comp_win_count){
-//     console.log('You won!!');
-// }
-// else if(player_win_count === comp_win_count)
-//     console.log('Draw');
-// else {
-//     console.log('GIT GUD')
-// }
 const rock = document.querySelector(".rock")
 const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
@@ -56,7 +10,6 @@ const log_html = document.querySelector(".game-log")
 const player1_playing = document.querySelector(".player-1")
 const player2_playing = document.querySelector(".player-2")
 player1_playing.classList.toggle("playing")
-// player1_playing.textContent = "--> Player 1 <--";
 let player1_win = 0;
 let player2_win = 0;
 let current_round = 1;
@@ -78,7 +31,6 @@ scissors.addEventListener('click', () => {
 
 function playRound(selection) {
     if (game_status === "on") {
-        // alert("Player " + current_player + " selected " + selection);
         round_html.textContent = "Round " + current_round;
         current_round_selection[current_player - 1] = selection
         if (current_round_selection.length == 2) {
@@ -123,7 +75,6 @@ function playRound(selection) {
             player1_playing.classList.toggle("playing")
             player1_playing.textContent = "Player 1";
             player2_playing.classList.toggle("playing")
-            // player2_playing.textContent = "--> Player 2 <--";
             current_player = 2
         }
         else {
@@ -131,7 +82,6 @@ function playRound(selection) {
             player2_playing.classList.toggle("playing")
             player2_playing.textContent = "Player 2";
             player1_playing.classList.toggle("playing")
-            // player1_playing.textContent = "--> Player 1 <--";
         }
 
         if(game_status==='off'){
@@ -144,11 +94,6 @@ function playRound(selection) {
             restart.appendChild(btn)
             const check_last_player = document.querySelector(".playing")
             check_last_player.classList.toggle("playing")
-            // if(check_last_player.textContent.includes('Player 1')){
-            //     check_last_player.textContent = "Player 1"
-            // }else {
-            //     check_last_player.textContent = "Player 2"
-            // }
         }
 
     }
